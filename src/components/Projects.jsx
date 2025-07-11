@@ -31,13 +31,13 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header scroll-animate">
           <h2>Key Projects & Partnerships</h2>
           <p>Trusted by leading organizations across Zimbabwe</p>
         </div>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
+            <div key={index} className="project-card scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
               <img 
                 src={project.image} 
                 alt={project.title}

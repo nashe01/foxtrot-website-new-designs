@@ -27,13 +27,13 @@ const WhyChooseUs = () => {
   return (
     <section className="why-choose-us">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header scroll-animate">
           <h2>Why Choose Foxtrot</h2>
           <p>Your trusted partner in technology solutions</p>
         </div>
         <div className="features-grid">
           {features.map((feature, index) => (
-            <div key={index} className="feature">
+            <div key={index} className="feature scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
               <i className={feature.icon}></i>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>

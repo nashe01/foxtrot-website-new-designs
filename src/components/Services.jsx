@@ -67,13 +67,13 @@ const Services = () => {
   return (
     <section id="services" className="services">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header scroll-animate">
           <h2>Our Services</h2>
           <p>Comprehensive technology solutions for challenging environments</p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div key={index} className="service-card scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
               <img 
                 src={service.image} 
                 alt={service.title}
