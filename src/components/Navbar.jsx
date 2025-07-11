@@ -2,13 +2,13 @@ import React from 'react'
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
-    <nav className="navbar">
+    <nav className="navbar animate-on-load-top">
       <div className="nav-container">
-        <div className="nav-logo">
+        <div className="nav-logo animate-on-load-left">
           <h2>Foxtrot</h2>
           <span>Electrocommunication Systems</span>
         </div>
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''} animate-on-load-right`}>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -16,7 +16,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div 
-          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+          className={`hamburger ${isMenuOpen ? 'active' : ''} animate-on-load-right`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <span></span>

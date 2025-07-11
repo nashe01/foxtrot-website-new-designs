@@ -32,12 +32,12 @@ const About = () => {
   return (
     <section id="about" className="about">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header scroll-animate">
           <h2>About Foxtrot</h2>
           <p>Empowering communities through innovative technology solutions</p>
         </div>
         <div className="about-content">
-          <div className="about-text">
+          <div className="about-text scroll-animate">
             <h3>Our Vision</h3>
             <p>To be the leading provider of robust, innovative, and sustainable communication and power solutions in Africa.</p>
             
@@ -46,7 +46,7 @@ const About = () => {
             
             <div className="values-grid">
               {values.map((value, index) => (
-                <div key={index} className="value-item">
+                <div key={index} className="value-item scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
                   <i className={value.icon}></i>
                   <h4>{value.title}</h4>
                   <p>{value.description}</p>
