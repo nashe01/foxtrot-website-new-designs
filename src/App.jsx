@@ -37,10 +37,19 @@ function App() {
     return () => document.removeEventListener('click', handleAnchorClick)
   }, [])
 
-  // Scroll-triggered animations
+  // Scroll-triggered animations and initial load animations
   useEffect(() => {
     if (!isLoaded) return
 
+    // Trigger initial load animations after a short delay
+    setTimeout(() => {
+      const loadElements = document.querySelectorAll('.animate-on-load, .animate-on-load-left, .animate-on-load-right, .animate-on-load-scale, .animate-on-load-top')
+      loadElements.forEach(el => {
+        el.style.animationPlayState = 'running'
+      })
+    }, 100)
+
+    // Set up scroll-triggered animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -63,7 +72,7 @@ function App() {
   }, [isLoaded])
 
   return (
-    <div className="App">
+    <div className={`App ${isLoaded ? 'animations-ready' : ''}`}>
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       <div className={`main-content ${isLoaded ? 'loaded' : ''}`}>
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
