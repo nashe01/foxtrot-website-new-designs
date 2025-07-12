@@ -520,6 +520,27 @@ li {
     font-weight: 500;
 }
 
+/* ScrollReveal specific styles for section headers */
+.section-header .text-\[#f9b233\] {
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.section-header .text-lg {
+    font-size: 1.3rem !important;
+    line-height: 1.6 !important;
+    word-spacing: 0.1em !important;
+    letter-spacing: 0.01em !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    font-weight: 500 !important;
+    color: #6c7a89 !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -872,5 +893,14 @@ input:focus, textarea:focus {
     
     .section-header p {
         font-size: 1.1rem;
+    }
+    
+    .section-header .text-\[#f9b233\] {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .section-header .text-lg {
+        font-size: 1.1rem !important;
     }
 } 
