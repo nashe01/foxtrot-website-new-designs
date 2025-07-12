@@ -419,13 +419,13 @@ li {
     flex: 1 1 350px;
 }
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.04em;
     color: #f9b233;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 .hero-content p {
     font-size: 1.2rem;
@@ -497,25 +497,27 @@ li {
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
 }
 .section-header h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
     color: #f9b233;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    font-weight: 800;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .section-header p {
     color: #6c7a89;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     word-spacing: 0.1em;
     letter-spacing: 0.01em;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
 .container {
@@ -856,5 +858,19 @@ input:focus, textarea:focus {
     
     .footer-content {
         flex-direction: column;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .section-header p {
+        font-size: 1.1rem;
     }
 } 
