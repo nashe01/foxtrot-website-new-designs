@@ -85,6 +85,38 @@ const ScrollRevealDemo = () => {
         </div>
       </div>
 
+      {/* Word Spacing Options */}
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="p-6 border-b border-gray-200">
+          <h3 className="text-xl font-semibold text-gray-900">Word Spacing</h3>
+          <p className="text-gray-600 mt-2">
+            Control the spacing between words for better readability
+          </p>
+        </div>
+        <div className="p-6 space-y-12">
+          <div>
+            <h4 className="text-lg font-medium text-gray-800 mb-4">Tight Spacing</h4>
+            <ScrollReveal wordSpacing="tight">
+              Compact text with minimal spacing between words for dense content layouts.
+            </ScrollReveal>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-medium text-gray-800 mb-4">Normal Spacing</h4>
+            <ScrollReveal wordSpacing="normal">
+              Standard spacing that provides comfortable reading experience for most content.
+            </ScrollReveal>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-medium text-gray-800 mb-4">Wide Spacing</h4>
+            <ScrollReveal wordSpacing="wide">
+              Generous spacing between words for emphasis and visual breathing room.
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+
       {/* Color Variants */}
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="p-6 border-b border-gray-200">
