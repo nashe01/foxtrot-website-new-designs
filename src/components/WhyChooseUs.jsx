@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollReveal from './ScrollReveal'
 
 const WhyChooseUs = () => {
   const features = [
@@ -28,15 +29,23 @@ const WhyChooseUs = () => {
     <section className="why-choose-us">
       <div className="container">
         <div className="section-header scroll-animate">
-          <h2>Why Choose Foxtrot</h2>
-          <p>Your trusted partner in technology solutions</p>
+          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+            Why Choose Foxtrot
+          </ScrollReveal>
+          <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
+            Your trusted partner in technology solutions
+          </ScrollReveal>
         </div>
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
               <i className={feature.icon}></i>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
+              <ScrollReveal size="lg" align="center" variant="default" staggerDelay={0.04}>
+                {feature.title}
+              </ScrollReveal>
+              <ScrollReveal size="sm" align="center" variant="muted" staggerDelay={0.03}>
+                {feature.description}
+              </ScrollReveal>
             </div>
           ))}
         </div>

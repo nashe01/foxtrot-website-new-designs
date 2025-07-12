@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ScrollReveal from './ScrollReveal'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,30 +28,46 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header scroll-animate">
-          <h2>Contact Us</h2>
-          <p>Get in touch to discuss your technology needs</p>
+          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+            Contact Us
+          </ScrollReveal>
+          <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
+            Get in touch to discuss your technology needs
+          </ScrollReveal>
         </div>
         <div className="contact-content">
           <div className="contact-info scroll-animate">
             <div className="contact-item scroll-animate" style={{ animationDelay: '0.1s' }}>
               <i className="fas fa-map-marker-alt"></i>
               <div>
-                <h3>Head Office</h3>
-                <p>4584 Manyame Park, Chitungwiza, Zimbabwe</p>
+                <ScrollReveal size="lg" align="left" variant="default" staggerDelay={0.03}>
+                  Head Office
+                </ScrollReveal>
+                <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
+                  4584 Manyame Park, Chitungwiza, Zimbabwe
+                </ScrollReveal>
               </div>
             </div>
             <div className="contact-item scroll-animate" style={{ animationDelay: '0.2s' }}>
               <i className="fas fa-phone"></i>
               <div>
-                <h3>Telephone</h3>
-                <p>+263 (0) 774 116 149</p>
+                <ScrollReveal size="lg" align="left" variant="default" staggerDelay={0.03}>
+                  Telephone
+                </ScrollReveal>
+                <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
+                  +263 (0) 774 116 149
+                </ScrollReveal>
               </div>
             </div>
             <div className="contact-item scroll-animate" style={{ animationDelay: '0.3s' }}>
               <i className="fas fa-envelope"></i>
               <div>
-                <h3>Email</h3>
-                <p>info@foxtrot_systems@aol.com</p>
+                <ScrollReveal size="lg" align="left" variant="default" staggerDelay={0.03}>
+                  Email
+                </ScrollReveal>
+                <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
+                  info@foxtrot_systems@aol.com
+                </ScrollReveal>
               </div>
             </div>
           </div>

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Load-up animations */
 @keyframes fadeInUp {
   from {

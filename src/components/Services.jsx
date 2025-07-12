@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollReveal from './ScrollReveal'
 
 const Services = () => {
   const services = [
@@ -68,8 +69,12 @@ const Services = () => {
     <section id="services" className="services">
       <div className="container">
         <div className="section-header scroll-animate">
-          <h2>Our Services</h2>
-          <p>Comprehensive technology solutions for challenging environments</p>
+          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+            Our Services
+          </ScrollReveal>
+          <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
+            Comprehensive technology solutions for challenging environments
+          </ScrollReveal>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
@@ -85,10 +90,16 @@ const Services = () => {
               <div className="service-icon">
                 <i className={service.icon}></i>
               </div>
-              <h3>{service.title}</h3>
+              <ScrollReveal size="xl" align="center" variant="default" staggerDelay={0.04}>
+                {service.title}
+              </ScrollReveal>
               <ul>
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex}>{feature}</li>
+                  <li key={featureIndex}>
+                    <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
+                      {feature}
+                    </ScrollReveal>
+                  </li>
                 ))}
               </ul>
             </div>
