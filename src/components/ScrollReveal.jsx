@@ -61,14 +61,14 @@ const ScrollReveal = ({
   // Word spacing classes
   const spacingClasses = {
     tight: "w-0.5",
-    normal: "w-1",
-    wide: "w-2"
+    normal: "w-1.5",
+    wide: "w-3"
   };
 
   return (
     <div 
       ref={ref}
-      className={`${sizeClasses[size]} ${alignClasses[align]} ${variantClasses[variant]} leading-relaxed ${className}`}
+      className={`${sizeClasses[size]} ${alignClasses[align]} ${variantClasses[variant]} leading-relaxed tracking-wide ${className}`}
     >
       {words.map((word, index) => (
         <React.Fragment key={index}>
