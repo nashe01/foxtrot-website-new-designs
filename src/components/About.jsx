@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollReveal from './ScrollReveal'
 
 const About = () => {
   const values = [
@@ -33,23 +34,39 @@ const About = () => {
     <section id="about" className="about">
       <div className="container">
         <div className="section-header scroll-animate">
-          <h2>About Foxtrot</h2>
-          <p>Empowering communities through innovative technology solutions</p>
+          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+            About Foxtrot
+          </ScrollReveal>
+          <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
+            Empowering communities through innovative technology solutions
+          </ScrollReveal>
         </div>
         <div className="about-content">
           <div className="about-text scroll-animate">
-            <h3>Our Vision</h3>
-            <p>To be the leading provider of robust, innovative, and sustainable communication and power solutions in Africa.</p>
+            <ScrollReveal size="2xl" align="left" variant="default" staggerDelay={0.05}>
+              Our Vision
+            </ScrollReveal>
+            <ScrollReveal size="md" align="left" variant="muted" staggerDelay={0.03}>
+              To be the leading provider of robust, innovative, and sustainable communication and power solutions in Africa.
+            </ScrollReveal>
             
-            <h3>Our Mission</h3>
-            <p>To deliver high-quality Electrocommunication systems and solar energy solutions tailored to meet the diverse needs of our clients, supporting conservation, safety, and development efforts across the region.</p>
+            <ScrollReveal size="2xl" align="left" variant="default" staggerDelay={0.05}>
+              Our Mission
+            </ScrollReveal>
+            <ScrollReveal size="md" align="left" variant="muted" staggerDelay={0.03}>
+              To deliver high-quality Electrocommunication systems and solar energy solutions tailored to meet the diverse needs of our clients, supporting conservation, safety, and development efforts across the region.
+            </ScrollReveal>
             
             <div className="values-grid">
               {values.map((value, index) => (
                 <div key={index} className="value-item scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
                   <i className={value.icon}></i>
-                  <h4>{value.title}</h4>
-                  <p>{value.description}</p>
+                  <ScrollReveal size="lg" align="center" variant="default" staggerDelay={0.03}>
+                    {value.title}
+                  </ScrollReveal>
+                  <ScrollReveal size="sm" align="center" variant="muted" staggerDelay={0.02}>
+                    {value.description}
+                  </ScrollReveal>
                 </div>
               ))}
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
@@ -14,6 +15,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><Link to="/demo">Animation Demo</Link></li>
         </ul>
         <div 
           className={`hamburger ${isMenuOpen ? 'active' : ''} animate-on-load-right`}
