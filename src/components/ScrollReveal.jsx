@@ -11,10 +11,8 @@ const ScrollReveal = ({
   baseOpacity = 0.1,
   baseRotation = 2,
   blurStrength = 3,
-  staggerDelay = 0.05,
   duration = 0.6,
   className = "",
-  wordSpacing = "normal", // "tight", "normal", "wide"
   springConfig = {
     damping: 20,
     stiffness: 100,
@@ -26,9 +24,6 @@ const ScrollReveal = ({
     once: true, 
     margin: "-100px 0px -100px 0px" 
   });
-
-  // Split text into words and handle spacing
-  const words = typeof children === 'string' ? children.split(' ').filter(word => word.trim() !== '') : [children];
 
   // Size classes
   const sizeClasses = {
@@ -58,50 +53,38 @@ const ScrollReveal = ({
     accent: "text-purple-600 dark:text-purple-400"
   };
 
-  // Word spacing classes - using margin instead of width for better spacing
-  const spacingClasses = {
-    tight: "mr-1",
-    normal: "mr-2",
-    wide: "mr-3"
-  };
+
 
   return (
-    <div 
+    <motion.div 
       ref={ref}
       className={`${sizeClasses[size]} ${alignClasses[align]} ${variantClasses[variant]} leading-relaxed tracking-wide word-spacing-wide ${className}`}
+      initial={{
+        opacity: baseOpacity,
+        rotateX: baseRotation,
+        filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
+        y: 20
+      }}
+      animate={isInView ? {
+        opacity: 1,
+        rotateX: 0,
+        filter: 'blur(0px)',
+        y: 0
+      } : {
+        opacity: baseOpacity,
+        rotateX: baseRotation,
+        filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
+        y: 20
+      }}
+      transition={{
+        duration: duration,
+        ease: [0.25, 0.46, 0.45, 0.94],
+        ...springConfig
+      }}
+      style={{ wordSpacing: '0.2em' }}
     >
-      {words.map((word, index) => (
-        <motion.span
-          key={index}
-          initial={{
-            opacity: baseOpacity,
-            rotateX: baseRotation,
-            filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
-            y: 20
-          }}
-          animate={isInView ? {
-            opacity: 1,
-            rotateX: 0,
-            filter: 'blur(0px)',
-            y: 0
-          } : {
-            opacity: baseOpacity,
-            rotateX: baseRotation,
-            filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
-            y: 20
-          }}
-          transition={{
-            duration: duration,
-            delay: index * staggerDelay,
-            ease: [0.25, 0.46, 0.45, 0.94],
-            ...springConfig
-          }}
-          className={`inline-block ${spacingClasses[wordSpacing]}`}
-        >
-          {word}
-        </motion.span>
-      ))}
-    </div>
+      {children}
+    </motion.div>
   );
 };
 
