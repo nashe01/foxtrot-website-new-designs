@@ -69,7 +69,7 @@ const Services = () => {
     <section id="services" className="services">
       <div className="container">
         <div className="section-header scroll-animate">
-          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+          <ScrollReveal size="4xl" align="center" variant="gold" staggerDelay={0.06}>
             Our Services
           </ScrollReveal>
           <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
@@ -90,7 +90,7 @@ const Services = () => {
               <div className="service-icon">
                 <i className={service.icon}></i>
               </div>
-              <ScrollReveal size="xl" align="center" variant="default" staggerDelay={0.04}>
+              <ScrollReveal size="xl" align="center" variant="gold" staggerDelay={0.04}>
                 {service.title}
               </ScrollReveal>
               <ul>

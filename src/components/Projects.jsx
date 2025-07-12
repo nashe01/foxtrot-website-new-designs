@@ -33,7 +33,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <div className="section-header scroll-animate">
-          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+          <ScrollReveal size="4xl" align="center" variant="gold" staggerDelay={0.06}>
             Key Projects & Partnerships
           </ScrollReveal>
           <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
@@ -54,7 +54,7 @@ const Projects = () => {
               <div className="project-icon">
                 <i className={project.icon}></i>
               </div>
-              <ScrollReveal size="xl" align="center" variant="default" staggerDelay={0.04}>
+              <ScrollReveal size="xl" align="center" variant="gold" staggerDelay={0.04}>
                 {project.title}
               </ScrollReveal>
               <ScrollReveal size="sm" align="center" variant="muted" staggerDelay={0.03}>

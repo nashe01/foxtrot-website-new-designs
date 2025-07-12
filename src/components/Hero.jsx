@@ -9,7 +9,7 @@ const Hero = () => {
           <ScrollReveal 
             size="5xl" 
             align="left" 
-            variant="default"
+            variant="gold"
             staggerDelay={0.08}
             className="animate-delay-1"
           >

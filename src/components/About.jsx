@@ -34,7 +34,7 @@ const About = () => {
     <section id="about" className="about">
       <div className="container">
         <div className="section-header scroll-animate">
-          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+          <ScrollReveal size="4xl" align="center" variant="gold" staggerDelay={0.06}>
             About Foxtrot
           </ScrollReveal>
           <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
@@ -43,14 +43,14 @@ const About = () => {
         </div>
         <div className="about-content">
           <div className="about-text scroll-animate">
-            <ScrollReveal size="2xl" align="left" variant="default" staggerDelay={0.05}>
+            <ScrollReveal size="2xl" align="left" variant="gold" staggerDelay={0.05}>
               Our Vision
             </ScrollReveal>
             <ScrollReveal size="md" align="left" variant="muted" staggerDelay={0.03}>
               To be the leading provider of robust, innovative, and sustainable communication and power solutions in Africa.
             </ScrollReveal>
             
-            <ScrollReveal size="2xl" align="left" variant="default" staggerDelay={0.05}>
+            <ScrollReveal size="2xl" align="left" variant="gold" staggerDelay={0.05}>
               Our Mission
             </ScrollReveal>
             <ScrollReveal size="md" align="left" variant="muted" staggerDelay={0.03}>
@@ -61,7 +61,7 @@ const About = () => {
               {values.map((value, index) => (
                 <div key={index} className="value-item scroll-animate" style={{ animationDelay: `${index * 0.1}s` }}>
                   <i className={value.icon}></i>
-                  <ScrollReveal size="lg" align="center" variant="default" staggerDelay={0.03}>
+                  <ScrollReveal size="lg" align="center" variant="gold" staggerDelay={0.03}>
                     {value.title}
                   </ScrollReveal>
                   <ScrollReveal size="sm" align="center" variant="muted" staggerDelay={0.02}>

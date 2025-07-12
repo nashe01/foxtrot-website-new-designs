@@ -28,7 +28,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container">
         <div className="section-header scroll-animate">
-          <ScrollReveal size="4xl" align="center" variant="default" staggerDelay={0.06}>
+          <ScrollReveal size="4xl" align="center" variant="gold" staggerDelay={0.06}>
             Contact Us
           </ScrollReveal>
           <ScrollReveal size="lg" align="center" variant="muted" staggerDelay={0.04}>
@@ -40,9 +40,9 @@ const Contact = () => {
             <div className="contact-item scroll-animate" style={{ animationDelay: '0.1s' }}>
               <i className="fas fa-map-marker-alt"></i>
               <div>
-                <ScrollReveal size="lg" align="left" variant="default" staggerDelay={0.03}>
-                  Head Office
-                </ScrollReveal>
+                                  <ScrollReveal size="lg" align="left" variant="gold" staggerDelay={0.03}>
+                    Head Office
+                  </ScrollReveal>
                 <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
                   4584 Manyame Park, Chitungwiza, Zimbabwe
                 </ScrollReveal>
@@ -51,9 +51,9 @@ const Contact = () => {
             <div className="contact-item scroll-animate" style={{ animationDelay: '0.2s' }}>
               <i className="fas fa-phone"></i>
               <div>
-                <ScrollReveal size="lg" align="left" variant="default" staggerDelay={0.03}>
-                  Telephone
-                </ScrollReveal>
+                                  <ScrollReveal size="lg" align="left" variant="gold" staggerDelay={0.03}>
+                    Telephone
+                  </ScrollReveal>
                 <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
                   +263 (0) 774 116 149
                 </ScrollReveal>
@@ -62,9 +62,9 @@ const Contact = () => {
             <div className="contact-item scroll-animate" style={{ animationDelay: '0.3s' }}>
               <i className="fas fa-envelope"></i>
               <div>
-                <ScrollReveal size="lg" align="left" variant="default" staggerDelay={0.03}>
-                  Email
-                </ScrollReveal>
+                                  <ScrollReveal size="lg" align="left" variant="gold" staggerDelay={0.03}>
+                    Email
+                  </ScrollReveal>
                 <ScrollReveal size="sm" align="left" variant="muted" staggerDelay={0.02}>
                   info@foxtrot_systems@aol.com
                 </ScrollReveal>

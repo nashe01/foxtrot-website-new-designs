@@ -50,7 +50,8 @@ const ScrollReveal = ({
     default: "text-gray-900 dark:text-gray-100",
     muted: "text-gray-600 dark:text-gray-400",
     primary: "text-blue-600 dark:text-blue-400",
-    accent: "text-purple-600 dark:text-purple-400"
+    accent: "text-purple-600 dark:text-purple-400",
+    gold: "text-yellow-600"
   };
 
 
