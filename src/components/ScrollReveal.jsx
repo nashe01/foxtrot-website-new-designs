@@ -58,51 +58,48 @@ const ScrollReveal = ({
     accent: "text-purple-600 dark:text-purple-400"
   };
 
-  // Word spacing classes
+  // Word spacing classes - using margin instead of width for better spacing
   const spacingClasses = {
-    tight: "w-0.5",
-    normal: "w-1.5",
-    wide: "w-3"
+    tight: "mr-1",
+    normal: "mr-2",
+    wide: "mr-3"
   };
 
   return (
     <div 
       ref={ref}
-      className={`${sizeClasses[size]} ${alignClasses[align]} ${variantClasses[variant]} leading-relaxed tracking-wide ${className}`}
+      className={`${sizeClasses[size]} ${alignClasses[align]} ${variantClasses[variant]} leading-relaxed tracking-wide word-spacing-wide ${className}`}
     >
       {words.map((word, index) => (
-        <React.Fragment key={index}>
-          <motion.span
-            initial={{
-              opacity: baseOpacity,
-              rotateX: baseRotation,
-              filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
-              y: 20
-            }}
-            animate={isInView ? {
-              opacity: 1,
-              rotateX: 0,
-              filter: 'blur(0px)',
-              y: 0
-            } : {
-              opacity: baseOpacity,
-              rotateX: baseRotation,
-              filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
-              y: 20
-            }}
-            transition={{
-              duration: duration,
-              delay: index * staggerDelay,
-              ease: [0.25, 0.46, 0.45, 0.94],
-              ...springConfig
-            }}
-            className="inline-block"
-          >
-            {word}
-          </motion.span>
-          {/* Add space after each word except the last one */}
-          {index < words.length - 1 && <span className={`inline-block ${spacingClasses[wordSpacing]}`}></span>}
-        </React.Fragment>
+        <motion.span
+          key={index}
+          initial={{
+            opacity: baseOpacity,
+            rotateX: baseRotation,
+            filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
+            y: 20
+          }}
+          animate={isInView ? {
+            opacity: 1,
+            rotateX: 0,
+            filter: 'blur(0px)',
+            y: 0
+          } : {
+            opacity: baseOpacity,
+            rotateX: baseRotation,
+            filter: enableBlur ? `blur(${blurStrength}px)` : 'blur(0px)',
+            y: 20
+          }}
+          transition={{
+            duration: duration,
+            delay: index * staggerDelay,
+            ease: [0.25, 0.46, 0.45, 0.94],
+            ...springConfig
+          }}
+          className={`inline-block ${spacingClasses[wordSpacing]}`}
+        >
+          {word}
+        </motion.span>
       ))}
     </div>
   );
