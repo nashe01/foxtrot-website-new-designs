@@ -58,26 +58,31 @@
 .animate-on-load {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
+  animation-play-state: paused;
 }
 
 .animate-on-load-left {
   opacity: 0;
   animation: fadeInLeft 0.8s ease-out forwards;
+  animation-play-state: paused;
 }
 
 .animate-on-load-right {
   opacity: 0;
   animation: fadeInRight 0.8s ease-out forwards;
+  animation-play-state: paused;
 }
 
 .animate-on-load-scale {
   opacity: 0;
   animation: scaleIn 0.8s ease-out forwards;
+  animation-play-state: paused;
 }
 
 .animate-on-load-top {
   opacity: 0;
   animation: slideInFromTop 0.8s ease-out forwards;
+  animation-play-state: paused;
 }
 
 /* Staggered animations */
@@ -174,6 +179,15 @@
 
 .main-content.loaded {
   opacity: 1;
+}
+
+/* Animation trigger class */
+.animations-ready .animate-on-load,
+.animations-ready .animate-on-load-left,
+.animations-ready .animate-on-load-right,
+.animations-ready .animate-on-load-scale,
+.animations-ready .animate-on-load-top {
+  animation-play-state: running;
 }
 
 body {
