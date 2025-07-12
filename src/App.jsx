@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoadingScreen from './components/LoadingScreen'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -9,7 +8,6 @@ import Projects from './components/Projects'
 import WhyChooseUs from './components/WhyChooseUs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import ScrollRevealDemo from './components/ScrollRevealDemo'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -74,28 +72,19 @@ function App() {
   }, [isLoaded])
 
   return (
-    <Router>
-      <div className={`App ${isLoaded ? 'animations-ready' : ''}`}>
-        {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-        <div className={`main-content ${isLoaded ? 'loaded' : ''}`}>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-                <Hero />
-                <About />
-                <Services />
-                <Projects />
-                <WhyChooseUs />
-                <Contact />
-                <Footer />
-              </>
-            } />
-            <Route path="/demo" element={<ScrollRevealDemo />} />
-          </Routes>
-        </div>
+    <div className={`App ${isLoaded ? 'animations-ready' : ''}`}>
+      {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
+      <div className={`main-content ${isLoaded ? 'loaded' : ''}`}>
+        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Hero />
+        <About />
+        <Services />
+        <Projects />
+        <WhyChooseUs />
+        <Contact />
+        <Footer />
       </div>
-    </Router>
+    </div>
   )
 }
 
