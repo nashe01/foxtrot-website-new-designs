@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CACHE BUST: Word spacing improvements - 2024 */
+
+/* CSS Custom Properties for word spacing */
+:root {
+  --word-spacing-normal: 0.1em;
+  --word-spacing-wide: 0.15em;
+  --word-spacing-extra: 0.2em;
+}
+
 /* Load-up animations */
 @keyframes fadeInUp {
   from {
@@ -196,7 +205,32 @@
 
 /* Enhanced word spacing for ScrollReveal component */
 .word-spacing-wide {
-  word-spacing: 0.15em;
+  word-spacing: 0.15em !important;
+}
+
+/* Force word spacing with higher specificity */
+body * {
+  word-spacing: var(--word-spacing-normal) !important;
+}
+
+/* Specific word spacing for different elements */
+p, div, span, li, h1, h2, h3, h4, h5, h6 {
+  word-spacing: var(--word-spacing-normal) !important;
+}
+
+/* Extra spacing for ScrollReveal components */
+.word-spacing-wide * {
+  word-spacing: var(--word-spacing-wide) !important;
+}
+
+/* Debug styles - temporary */
+.hero-content p,
+.about-text p,
+.service-card p,
+.project-card p,
+.feature p {
+  word-spacing: var(--word-spacing-extra) !important;
+  background-color: rgba(255, 0, 0, 0.1) !important;
 }
 
 body {
@@ -206,7 +240,7 @@ body {
     background: #f7f9fa;
     color: #222;
     line-height: 1.6;
-    word-spacing: 0.1em;
+    word-spacing: 0.1em !important;
     letter-spacing: 0.01em;
 }
 
