@@ -200,6 +200,56 @@ body {
     padding: 0;
     background: #f7f9fa;
     color: #222;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+}
+
+/* Improved spacing for lists */
+ul, ol {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Better paragraph spacing */
+.about-text p,
+.service-card p,
+.project-card p,
+.feature p,
+.contact-item p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Improved heading spacing */
+.section-header h2 {
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .navbar {
@@ -312,12 +362,17 @@ body {
 }
 .hero-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
 }
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
 }
 .hero-buttons {
     display: flex;
@@ -382,16 +437,23 @@ body {
 
 .section-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .section-header h2 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: #1a2236;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
 }
 .section-header p {
     color: #6c7a89;
     font-size: 1.1rem;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .container {
@@ -409,6 +471,19 @@ body {
 .about-text {
     flex: 1 1 400px;
 }
+
+.about-text h3 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.about-text p {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+}
 .values-grid {
     display: flex;
     flex-wrap: wrap;
@@ -418,10 +493,23 @@ body {
 .value-item {
     background: #fff;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
     flex: 1 1 180px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.value-item h4 {
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.value-item p {
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
 }
 .value-item i {
     font-size: 1.5rem;
@@ -466,17 +554,22 @@ body {
     margin-bottom: 1rem;
 }
 .service-card h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #1a2236;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
 }
 .service-card ul {
     list-style: none;
     padding: 0;
 }
 .service-card ul li {
-    padding: 0.3rem 0;
+    padding: 0.5rem 0;
     position: relative;
     padding-left: 1.5rem;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
 }
 .service-card ul li:before {
     content: "✓";
@@ -501,6 +594,19 @@ body {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(249, 178, 51, 0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.project-card p {
+    line-height: 1.7;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
 }
 
 .project-card:hover {
@@ -540,6 +646,19 @@ body {
     flex: 1 1 250px;
     text-align: center;
 }
+
+.feature h3 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.feature p {
+    line-height: 1.7;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+}
 .feature i {
     font-size: 2.5rem;
     color: #f9b233;
@@ -560,6 +679,19 @@ body {
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.contact-item p {
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
 }
 .contact-item i {
     font-size: 1.5rem;
