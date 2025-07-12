@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-container">
-        <div className="hero-content animate-on-load-left">
+        <div className="hero-content animate-on-load-left" style={{ wordSpacing: '0.3em', backgroundColor: 'rgba(255, 0, 0, 0.1)' }}>
           <ScrollReveal 
             size="5xl" 
             align="left" 

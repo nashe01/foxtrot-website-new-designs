@@ -233,6 +233,22 @@ p, div, span, li, h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255, 0, 0, 0.1) !important;
 }
 
+/* Override Tailwind with more specific selectors */
+.App .hero-content p,
+.App .about-text p,
+.App .service-card p,
+.App .project-card p,
+.App .feature p,
+.App .contact-item p {
+  word-spacing: 0.2em !important;
+  background-color: rgba(0, 255, 0, 0.1) !important;
+}
+
+/* Force word spacing on all text elements */
+.App * {
+  word-spacing: 0.15em !important;
+}
+
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;

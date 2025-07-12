@@ -72,7 +72,7 @@ function App() {
   }, [isLoaded])
 
   return (
-    <div className={`App ${isLoaded ? 'animations-ready' : ''}`}>
+    <div className={`App ${isLoaded ? 'animations-ready' : ''}`} style={{ wordSpacing: '0.2em' }}>
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       <div className={`main-content ${isLoaded ? 'loaded' : ''}`}>
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
